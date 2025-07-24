@@ -1,0 +1,11 @@
+a = input("请输入账号：")
+b = input("请输出密码：")
+print("账号：%s,密码:%s"%(a,b))
+
+num1 = input("请输入数字1")
+num2 = input("请输入数字2")
+print(type(num1))
+print(type(num2))
+num1 = int(num1)
+num2 = int(num2)
+print("sum:%f"%(num2+num1))
