@@ -76,31 +76,56 @@ python -m venv .venv
 ![img_2.png](files/img_2.png)
 
 
+[算术运算符](chapter3/calculate.py)
+
+
+* 优先级
+![img_3.png](files/img_3.png)
+
+
+* 布尔运算中的短路运算
+> 如果在布尔运算中使用的是布尔值，那么显示的就是布尔值，如果是其他类型的数值，如果那个数值表示的Flase，那么直接输出False,如果是true,就会输出逻辑运算中后面的数据
+
+示例如下:
+[短路运算](chapter3/boolcalculate.py)
+```python
+print("a" and "b")  # b
+print("hello" and 4.23)  # 4.23
+print('' and "demo")  # 输出空格
+print(False and  'hi')  # False
+```
+
+## 分支结构
+
+[match分支](chapter4/matchCondition.py)
 
 
 
 
+## 数据类型
+
+### 列表
+* 列表的定义
+
+![img_4.png](files/img_4.png)
+
+### 元组
+* 元组的定义
+![img_5.png](files/img_5.png)
+
+[元组示例](chapter6/tupleTest.py)
 
 
 
+### 字符串操作
+
+[字符串操作](chapter6/StrTest.py)
 
 
 
+### 字典
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![img_6.png](files/img_6.png)
 
 
 
