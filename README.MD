@@ -127,5 +127,134 @@ print(False and  'hi')  # False
 
 ![img_6.png](files/img_6.png)
 
+[字典示例](chapter6/dictTest.py)
 
 
+### 集合类型
+![img_7.png](files/img_7.png)
+
+## 异常
+![img_8.png](files/img_8.png)
+
+* raise关键字 相当于Java的throw ，用于抛出异常
+[raise关键字示例](chapter7/RaiseTest.py)
+
+
+
+## 函数
+![img_9.png](files/img_9.png)
+
+
+### 全局变量和局部变量
+>在方法内部如果要修改全局变量，先要声明一个和全局变量名称一样的变量:global 全局变量名相同的变量,然后再去修改。
+
+[全局变量和局部变量示例](chapter8/GlobalOrLocalVariable.py)
+
+### lambda实现匿名函数
+![img_10.png](files/img_10.png)
+
+
+### 包管理
+* 模块的基本概念
+> * 模块：一个包含 Python 代码的.py文件，可包含函数、类、变量等
+> * 包：多个相关模块的集合，包含__init__.py文件（Python 3.3 + 可省略）的目录
+
+* 导入模块的方式
+```python
+# 导入整个模块
+import math
+print(math.sqrt(16))  # 使用模块名.函数名调用
+
+# 导入模块中的特定成员
+from math import sqrt, pi
+print(sqrt(16))
+print(pi)
+
+# 导入模块并指定别名
+import numpy as np
+print(np.array([1, 2, 3]))
+
+# 导入模块中的所有成员（不推荐，可能导致命名冲突）
+from math import *
+```
+
+* 模块搜索路径
+```text
+Python 解释器按以下顺序查找模块：
+1、当前目录
+2、环境变量PYTHONPATH指定的目录
+3、Python 安装时默认的库目录
+```
+```python
+# 可以通过以下代码查看搜索路径：
+import sys
+print(sys.path)  # 打印模块搜索路径列表
+
+# 添加自定义路径到搜索路径
+sys.path.append("/path/to/your/modules")
+```
+
+* 4. 包的使用
+
+```python
+mypackage/
+├── __init__.py
+├── module1.py
+└── module2.py
+# __init__.py文件的作用：
+# 标识该目录为 Python 包
+# 控制包的导入行为
+# 可以定义__all__变量指定from package import *时导入的模块
+```
+
+* 5. 常用模块管理工具
+````python
+# 安装包
+pip install package_name
+
+# 安装特定版本
+pip install package_name==1.0.0
+
+# 升级包
+pip install --upgrade package_name
+
+# 卸载包
+pip uninstall package_name
+
+# 查看已安装的包
+pip list
+
+# 导出已安装的包列表
+pip freeze > requirements.txt
+
+# 从列表安装包
+pip install -r requirements.txt
+````
+
+[示例代码](chapter8/ImportModule.py)
+
+### 正则表达式
+![img_11.png](files/img_11.png)
+
+
+
+
+
+
+
+### 常用的第三方库
+![img_12.png](files/img_12.png)
+
+
+
+## 文件读写
+![img_13.png](files/img_13.png)
+
+[读文件](chapter10/FileReadTest.py)
+[写文件](chapter10/FileWriteTest.py)
+[追加文件](chapter10/FileAppenTest.py)
+[with关键字打开文件](chapter10/WithOpenTest.py)
+[csv文件操作](chapter10/CsvTest.py)
+
+
+## 面向对象编程
